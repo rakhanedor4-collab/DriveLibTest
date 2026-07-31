@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLibTest - Google Drive SPA</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Identity Services (GIS) Kütüphanesi -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Başlık ve Kimlik Alanı -->
+        <header>
+            <h1>DriveLibTest</h1>
+            <div class="auth-section">
+                <!-- Giriş Yapılmamış Durum -->
+                <div id="loginContainer">
+                    <button id="btnLogin" class="primary">Google ile Giriş</button>
+                </div>
+                <!-- Giriş Yapılmış Profil Durumu -->
+                <div id="profileContainer" class="user-profile hidden">
+                    <img id="userAvatar" class="avatar hidden" src="" alt="Profil Resmi">
+                    <div class="user-info">
+                        <span id="userName" class="user-name"></span>
+                        <span id="userEmail" class="user-email"></span>
+                    </div>
+                    <button id="btnLogout" class="danger">Çıkış</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- İçerik Alanı -->
+        <main class="main-content">
+            <div class="toolbar">
+                <div class="status-container">
+                    <span id="fileStatus" class="status-badge">Oturum bekleniyor...</span>
+                </div>
+                <div class="actions">
+                    <button id="btnLoad">Yükle</button>
+                    <button id="btnSave" class="primary">Kaydet</button>
+                    <button id="btnNew">Yeni Dosya</button>
+                </div>
+            </div>
+
+            <div class="editor-container">
+                <textarea id="editorArea" placeholder="Google Drive'dan veri yüklemek için 'Yükle' butonuna basın..."></textarea>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modüler JavaScript Bağlantısı -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
