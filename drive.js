@@ -1,9 +1,10 @@
-* drive.js
+/**
+ * drive.js
  * Google Drive REST API v3 operasyonları (Arama, Oluşturma, Okuma, Güncelleme).
  */
 
 import { getAccessToken } from "./auth.js";
-import { CONFIG } from "./utils.js";
+import { CONFIG } from "./config.js";
 
 const DRIVE_API_BASE = "https://www.googleapis.com/drive/v3";
 const UPLOAD_API_BASE = "https://www.googleapis.com/upload/drive/v3";
